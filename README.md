@@ -4,6 +4,8 @@ Group 4
 
 ### To Do:
 
+#### ASAP
+
 * Preliminary background asset
 * Preliminary base assets
 * Preliminary unit assets - this means deciding on how many actual units we will be making
@@ -29,7 +31,7 @@ Group 4
 #### Branch 2 - Aesthetics
 
 * Add artwork for units
-* Add artwork for 
+* Add animations for units: walking, attacking, dying
 * Add sounds for units being hit, shooting, etc
 * Add artwork for bases
 * Add artwork for towers
