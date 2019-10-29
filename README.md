@@ -8,7 +8,7 @@ Group 4
 
 * Preliminary background asset
 * Preliminary base assets
-* Preliminary unit assets - this means deciding on how many actual units we will be making
+* ~~Preliminary unit assets~~ ![unit](https://raw.githubusercontent.com/csci-3312-f19-game-dev/Cowboys-and-Robots/master/Assets/GameObjects/Units/Sprites/Blue%20Melee.png)
 * Create scripts for units that inherit behavior and are extensible
 * Create simple game management script allowing the spawning of different units with keys and the automated spawning of enemies
 * Get combat system working so that units can move/fight and bases can be destroyed
