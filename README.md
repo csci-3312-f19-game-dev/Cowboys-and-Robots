@@ -9,11 +9,9 @@ Group 4
 * Preliminary background asset
 * Preliminary base assets
 * Preliminary unit assets - this means deciding on how many actual units we will be making
-
 * Create scripts for units that inherit behavior and are extensible
 * Create simple game management script allowing the spawning of different units with keys and the automated spawning of enemies
 * Get combat system working so that units can move/fight and bases can be destroyed
-
 * Get simple UI allowing mouse clicks to spawn units
 * Touch base and make sure everyone understands project organization at this point
 
