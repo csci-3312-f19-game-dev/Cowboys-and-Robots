@@ -22,7 +22,7 @@ Group 4
 
 * Preliminary tower assets
 * Design and allow for the creation of towers
-* Plan how the economy will work
+* Plan how the economy will work - this means how it will balance against enemy economy
 * Write up how the economy is supposed to work, how the units are supposed to work, present to team
 * Start to balance gameplay with low-res sprites *THIS WILL TAKE THE MOST TIME*
 
@@ -34,6 +34,7 @@ Group 4
 * Add artwork for bases
 * Add artwork for towers
 * Add game over scene, menu scene, game options (difficulty? sound options)
+* Finish UI using unit artwork
 
 ### Merge branches
 
