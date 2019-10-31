@@ -1,0 +1,1 @@
+When we are doing the artwork for the background, we need a background and foreground layer. The foreground layer (walls for the map) needs to be set to have the PathfindingObstacles layer for the AI to work.
