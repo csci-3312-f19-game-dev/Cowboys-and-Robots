@@ -15,7 +15,7 @@ TagManager:
   - 
   - PathfindingObstacles
   - PauseMenu
-  - 
+  - EditingLayer
   - 
   - 
   - 
@@ -43,4 +43,7 @@ TagManager:
     locked: 0
   - name: PaseMenu
     uniqueID: 2752419413
+    locked: 0
+  - name: EditingLayer
+    uniqueID: 2041429897
     locked: 0
