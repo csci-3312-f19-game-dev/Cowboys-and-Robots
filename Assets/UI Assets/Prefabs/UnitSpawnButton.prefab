@@ -168,6 +168,7 @@ GameObject:
   - component: {fileID: 463573309080998834}
   - component: {fileID: 463573309080998829}
   - component: {fileID: 463573309080998828}
+  - component: {fileID: 7579941743922809002}
   m_Layer: 5
   m_Name: UnitSpawnButton
   m_TagString: Untagged
@@ -285,3 +286,16 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+--- !u!114 &7579941743922809002
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 463573309080998830}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4ee7061cef6a50d4fb62cd2430a44fd5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  text: {fileID: 8975867481423419823, guid: 4bec54b7f206cdf499cee191b2ca3ad4, type: 3}
