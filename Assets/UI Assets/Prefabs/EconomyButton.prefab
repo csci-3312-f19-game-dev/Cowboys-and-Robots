@@ -322,7 +322,7 @@ PrefabInstance:
     - target: {fileID: 463573309080998830, guid: 7a7d7a2a036381344b39ec0730166ff9,
         type: 3}
       propertyPath: m_Name
-      value: EconomyOption1
+      value: EconomyButton
       objectReference: {fileID: 0}
     - target: {fileID: 463573309080998830, guid: 7a7d7a2a036381344b39ec0730166ff9,
         type: 3}
@@ -489,6 +489,16 @@ PrefabInstance:
       propertyPath: m_fontSizeBase
       value: 24
       objectReference: {fileID: 0}
+    - target: {fileID: 463573307546881931, guid: 7a7d7a2a036381344b39ec0730166ff9,
+        type: 3}
+      propertyPath: m_Layer
+      value: 5
+      objectReference: {fileID: 0}
+    - target: {fileID: 463573307546881931, guid: 7a7d7a2a036381344b39ec0730166ff9,
+        type: 3}
+      propertyPath: m_Name
+      value: AddLabel
+      objectReference: {fileID: 0}
     - target: {fileID: 463573307546881928, guid: 7a7d7a2a036381344b39ec0730166ff9,
         type: 3}
       propertyPath: m_AnchoredPosition.x
@@ -509,17 +519,8 @@ PrefabInstance:
       propertyPath: m_SizeDelta.y
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 463573307546881931, guid: 7a7d7a2a036381344b39ec0730166ff9,
-        type: 3}
-      propertyPath: m_Layer
-      value: 5
-      objectReference: {fileID: 0}
-    - target: {fileID: 463573307546881931, guid: 7a7d7a2a036381344b39ec0730166ff9,
-        type: 3}
-      propertyPath: m_Name
-      value: AddLabel
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 7579941743922809002, guid: 7a7d7a2a036381344b39ec0730166ff9, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: 7a7d7a2a036381344b39ec0730166ff9, type: 3}
 --- !u!224 &4969151658752787052 stripped
 RectTransform:

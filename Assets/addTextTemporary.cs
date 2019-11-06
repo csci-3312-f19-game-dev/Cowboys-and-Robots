@@ -16,7 +16,7 @@ public class addTextTemporary : MonoBehaviour
 
     void SpawnText()
     {
-        TMP_Text clone = Instantiate(text, gameObject.transform);
+        TMP_Text clone = Instantiate(text, gameObject.transform) as TMP_Text;
         GameObject parent = GameObject.Find("GameMessages");
         clone.transform.parent = parent.transform;
     }
