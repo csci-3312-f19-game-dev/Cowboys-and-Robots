@@ -2,10 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract class Unit : Damageable
+public abstract class Unit : Damageable
 {
     protected int moveSpeed;
-    protected int range;
-    protected int damage;
-    protected float atkSpd;
+    protected float range;
+    protected float damage;
+    protected float atkRate;
+    protected float atkCooldown;
 }

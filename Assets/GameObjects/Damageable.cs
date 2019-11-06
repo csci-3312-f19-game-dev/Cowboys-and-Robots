@@ -2,10 +2,24 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-abstract public class Damageable : MonoBehaviour
+public abstract class Damageable : MonoBehaviour
 {
-    protected int health;
-    bool isCowboy;
+    protected float maxHealth;
+    protected float health;
+    public bool myTeam;
 
-    public abstract void TakeDamage(int amount);
+    public void TakeDamage(float amount)
+    {
+        health -= amount;
+        if (health <= 0)
+        {
+            Death();
+        }
+    }
+    public abstract void Death();
+    public bool isEnemy(bool team) { return myTeam != team; }
+
+    public virtual void TakeCavalryDamage(float amt) { TakeDamage(amt); }
+    public virtual void TakeLightDamage(float amt) { TakeDamage(amt); }
+    public virtual void TakeHeavyDamage(float amt) { TakeDamage(amt); }
 }
