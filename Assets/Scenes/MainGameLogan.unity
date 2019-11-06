@@ -950,10 +950,12 @@ MonoBehaviour:
   - {fileID: 1426944558069736182, guid: eef5d167e21409e44a456405b4f1d707, type: 3}
   - {fileID: 0}
   - {fileID: 1426944558069736182, guid: aa7823055b9b0344bad2a99a4067fc40, type: 3}
-  - {fileID: 0}
+  - {fileID: 1426944558069736182, guid: f9b8fcd0378a1c74bbd84d6fe26c4c99, type: 3}
   - {fileID: 0}
   playerBase: {fileID: 2113491051}
   enemyBase: {fileID: 1077204587}
+  money: 0
+  goldUI: {fileID: 1763556521}
 --- !u!1001 &325954155
 PrefabInstance:
   m_ObjectHideFlags: 0
