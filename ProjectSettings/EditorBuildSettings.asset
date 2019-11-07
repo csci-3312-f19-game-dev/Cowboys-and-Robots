@@ -5,7 +5,19 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
+  - enabled: 0
+    path: 
+    guid: 00000000000000000000000000000000
   - enabled: 1
-    path: Assets/Scenes/GameSplash.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/MainGameLogan.unity
+    guid: f257e6c470bbcb84ebe6c19f1017d14a
+  - enabled: 1
+    path: Assets/Scenes/MenuKendra.unity
+    guid: c155f441a5c56b147a281603e9686131
+  - enabled: 1
+    path: Assets/Scenes/GameOverKendra.unity
+    guid: 58a126dc495a6a242afbd2b6dad65ff0
+  - enabled: 1
+    path: Assets/Scenes/GameWonKendra.unity
+    guid: ba67b13f85a3ee144989e123acdfdee2
   m_configObjects: {}

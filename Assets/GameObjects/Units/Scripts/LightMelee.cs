@@ -21,7 +21,7 @@ public class LightMelee : LightUnit
     {
         health = maxHealth = 120;
         damage = 15;
-        range = 0.4f;
+        range = 0.6f;
         atkRate = 0.75f;
         atkCooldown = atkRate;
 
