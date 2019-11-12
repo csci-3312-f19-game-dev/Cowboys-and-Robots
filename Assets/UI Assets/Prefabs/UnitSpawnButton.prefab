@@ -299,3 +299,5 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   text: {fileID: 8975867481423419823, guid: 4bec54b7f206cdf499cee191b2ca3ad4, type: 3}
+  purchaseEffect: {fileID: 6785609033905750100, guid: d038b50a30c08ac4f8c8dd1915aa26ff,
+    type: 3}

@@ -6,7 +6,7 @@ using TMPro;
 
 public class NotEnoughGoldText : MonoBehaviour
 {
-    private float duration = 1.5f, speed = 2.5f, timer = 0;
+    private float duration = 1.5f, speed = 1.5f, timer = 0;
 
     public TMP_Text txt;
     // Start is called before the first frame update
