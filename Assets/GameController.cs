@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
@@ -56,4 +57,5 @@ public class GameController : MonoBehaviour
             u.GetComponent<Damageable>().myTeam = true;
         }
     }
+
 }
