@@ -16,19 +16,42 @@ public class GameController : MonoBehaviour
     public int money;
     public GameObject goldUI;
 
+    private  float nextEnemyTimer = 0;
+
+    private float moneyTimer = 0;
+
+
+
     private void Start()
     {
-        money = 999999;
+        money = 0;
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
-        if(Input.GetKey("f"))
-        {
-            enemyActive = !enemyActive;
-        }
         goldUI.GetComponent<TextMeshProUGUI>().text = money.ToString();
+
+
+        if (nextEnemyTimer <= 0)
+        {
+            nextEnemyTimer = Random.Range(3.0f, 12.0f);
+            GameObject u;
+            u = Instantiate(prefabs[Random.Range(0,9)], enemyBase.transform);
+            u.GetComponent<Damageable>().myTeam = false;
+        } else
+        {
+            nextEnemyTimer -= Time.fixedDeltaTime;
+        }
+
+        if (moneyTimer <= 0)
+        {
+            moneyTimer = 1f;
+            money += 1;
+        } else
+        {
+            moneyTimer -= Time.fixedDeltaTime;
+        }
     }
 
 
