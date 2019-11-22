@@ -1018,17 +1018,21 @@ MonoBehaviour:
   prefabs:
   - {fileID: 1426944558069736182, guid: bb83127e7c6c18c479429c9d2592618c, type: 3}
   - {fileID: 1426944558069736182, guid: 3a5b7e7c82d1a3d4cbd7c79731999d8c, type: 3}
-  - {fileID: 0}
+  - {fileID: 1426944558069736182, guid: b9bd7f37d070d254388d2fa38acd46d0, type: 3}
   - {fileID: 1426944558069736182, guid: 43ade18fd280fa2429d5b2e694ce9543, type: 3}
   - {fileID: 1426944558069736182, guid: eef5d167e21409e44a456405b4f1d707, type: 3}
-  - {fileID: 0}
+  - {fileID: 1426944558069736182, guid: 51fa6ae2f2e41ed498a4e43533250aab, type: 3}
   - {fileID: 1426944558069736182, guid: aa7823055b9b0344bad2a99a4067fc40, type: 3}
   - {fileID: 1426944558069736182, guid: f9b8fcd0378a1c74bbd84d6fe26c4c99, type: 3}
-  - {fileID: 0}
+  - {fileID: 1426944558069736182, guid: 41bd698cbc07508418266b15ae60e0ac, type: 3}
   playerBase: {fileID: 2113491051}
   enemyBase: {fileID: 1077204587}
   money: 0
+  enemyGold: 0
+  enemygps: 0
   goldUI: {fileID: 1763556521}
+  playerGps: 0
+  costs: 0a0000000f000000190000000f000000190000001e0000000c000000110000001e000000
 --- !u!1001 &325954155
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2929,7 +2933,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
   m_Radius: 0.25
 --- !u!1 &1097169761
@@ -6697,7 +6701,7 @@ CircleCollider2D:
   m_IsTrigger: 0
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.5}
   serializedVersion: 2
   m_Radius: 0.25
 --- !u!1001 &463573309327218018

@@ -8,7 +8,7 @@ public class Base : Damageable
     public Slider healthbar;
     void Start()
     {
-        health = maxHealth = 1000;
+        health = maxHealth = 5000;
     }
     public void FixedUpdate()
     {

@@ -14,17 +14,34 @@ public class GameController : MonoBehaviour
     public GameObject enemyBase;
 
     public int money;
+    public int enemyGold;
+    public float enemyGps;
+
+    private float gameTimer;
+
     public GameObject goldUI;
 
-    private  float nextEnemyTimer = 0;
+    private int nextEnemy = 0;
 
     private float moneyTimer = 0;
 
+    public int playerGps;
 
+    private float enemyStartGps = 3.5f;
+    private float enemyMaxGps = 12;
+
+    private float scaleStopTime;
+
+    private int playerStartGps = 2;
+
+    public int[] costs = { 10, 15, 25, 15, 25, 30, 12, 17, 30 };
 
     private void Start()
     {
-        money = 0;
+        money = 30;
+        enemyGold = 10;
+        playerGps = playerStartGps;
+        enemyGps = enemyStartGps;
     }
 
     // Update is called once per frame
@@ -33,31 +50,34 @@ public class GameController : MonoBehaviour
         goldUI.GetComponent<TextMeshProUGUI>().text = money.ToString();
 
 
-        if (nextEnemyTimer <= 0)
+        if (enemyGold >= costs[nextEnemy])
         {
-            nextEnemyTimer = Random.Range(3.0f, 12.0f);
+            enemyGold -= costs[nextEnemy];
             GameObject u;
-            u = Instantiate(prefabs[Random.Range(0,9)], enemyBase.transform);
+            u = Instantiate(prefabs[nextEnemy], enemyBase.transform);
             u.GetComponent<Damageable>().myTeam = false;
-        } else
-        {
-            nextEnemyTimer -= Time.fixedDeltaTime;
+            nextEnemy = Random.Range(0, 9);
         }
 
         if (moneyTimer <= 0)
         {
             moneyTimer = 1f;
-            money += 1;
+            money += playerGps;
+            enemyGold += (int)enemyGps;
         } else
         {
             moneyTimer -= Time.fixedDeltaTime;
         }
+        if (gameTimer < 5 * 60)
+        {
+            enemyGps += (enemyMaxGps - enemyStartGps) / (5 * 60) * Time.fixedDeltaTime;
+        }
+        gameTimer += Time.fixedDeltaTime;
     }
 
 
     public void SpawnUnit(int which)
     {
-        int[] costs = { 10, 15, 25, 15, 25, 30, 12, 17, 30 };
 
         if (money >= costs[which])
         {
