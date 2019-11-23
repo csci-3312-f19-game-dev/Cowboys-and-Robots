@@ -3,7 +3,14 @@ guid: 1810047ca92679a4a8bee155ac4974c3
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - infoPanel: {fileID: 3671000739215714437, guid: a25d5fe2ee5f2734cac4406d2ea5e21a,
+      type: 3}
+  - path: {instanceID: 0}
+  - dest: {instanceID: 0}
+  - cbRenderer: {instanceID: 0}
+  - rbRenderer: {instanceID: 0}
+  - healthSlider: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using Pathfinding;
 using UnityEngine.UI;
+using TMPro;
 
 public class CavalryMelee : Cavalry
 {
@@ -24,7 +25,8 @@ public class CavalryMelee : Cavalry
         range = 0.4f;
         atkRate = 0.75f;
         atkCooldown = atkRate;
-        
+        unitLabel = "Cavalry Melee";
+
         gc = FindObjectOfType<GameController>();
 
         targets = new List<Damageable>();
@@ -39,6 +41,9 @@ public class CavalryMelee : Cavalry
             cbRenderer.GetComponent<SpriteRenderer>().enabled = false;
             dest.target = gc.playerBase.transform;
         }
+
+
+
     }
 
     public override void Death()
