@@ -6,7 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class GameController : MonoBehaviour
 {
-
+    
     public bool enemyActive;
     public GameObject[] prefabs;
 
@@ -47,14 +47,15 @@ public class GameController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        
         goldUI.GetComponent<TextMeshProUGUI>().text = money.ToString();
 
 
         if (enemyGold >= costs[nextEnemy])
         {
             enemyGold -= costs[nextEnemy];
-            GameObject u;
-            u = Instantiate(prefabs[nextEnemy], enemyBase.transform);
+            GameObject u//;
+            /*u*/ = Instantiate(prefabs[nextEnemy], enemyBase.transform);
             u.GetComponent<Damageable>().myTeam = false;
             nextEnemy = Random.Range(0, 9);
         }

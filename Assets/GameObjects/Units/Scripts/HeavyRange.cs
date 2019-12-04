@@ -21,7 +21,7 @@ public class HeavyRange : Heavy
 
     private void Start()
     {
-        Debug.Log(infoPanel);
+        //Debug.Log(infoPanel);
         health = maxHealth = 75;
         damage = 20;
         range = 2.5f;

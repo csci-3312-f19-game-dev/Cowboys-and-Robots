@@ -12,7 +12,7 @@ public abstract class Unit : Damageable
     protected float damage;
     protected float atkRate;
     protected float atkCooldown;
-    public GameObject infoPanel;
+    //public GameObject infoPanel;
 
     TMP_Text[] components;
 

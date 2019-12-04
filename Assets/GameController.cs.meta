@@ -3,7 +3,12 @@ guid: 410f37eb8d794ac458b80ad64865d748
 MonoImporter:
   externalObjects: {}
   serializedVersion: 2
-  defaultReferences: []
+  defaultReferences:
+  - towerPrefab: {fileID: 1426944558069736182, guid: 187601a1a4b853a4b81cb02535629f34,
+      type: 3}
+  - playerBase: {instanceID: 0}
+  - enemyBase: {instanceID: 0}
+  - goldUI: {instanceID: 0}
   executionOrder: 0
   icon: {instanceID: 0}
   userData: 

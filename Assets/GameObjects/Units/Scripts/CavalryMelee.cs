@@ -25,7 +25,6 @@ public class CavalryMelee : Cavalry
         range = 0.4f;
         atkRate = 0.75f;
         atkCooldown = atkRate;
-        unitLabel = "Cavalry Melee";
 
         gc = FindObjectOfType<GameController>();
 
