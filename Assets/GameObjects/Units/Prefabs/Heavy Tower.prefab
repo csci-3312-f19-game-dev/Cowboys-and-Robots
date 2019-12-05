@@ -142,7 +142,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: b2f4b3d2e245eec4bbfb3832dc7181bd, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 6891eadc5335099469a0e659b466e4a7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -455,7 +455,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 126e647a3c0be834e8fb374747bb41cc, type: 3}
+  m_Sprite: {fileID: 21300000, guid: b2f4b3d2e245eec4bbfb3832dc7181bd, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -477,9 +477,9 @@ GameObject:
   - component: {fileID: 1426944558069736169}
   - component: {fileID: 1426944558069736173}
   - component: {fileID: 8383985530116527758}
-  - component: {fileID: 7081342481977794130}
+  - component: {fileID: 6934392113296740734}
   m_Layer: 8
-  m_Name: Light Tower
+  m_Name: Heavy Tower
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -540,7 +540,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &7081342481977794130
+--- !u!114 &6934392113296740734
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -549,7 +549,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1426944558069736182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe2ec758146792448dde13e4f282d50, type: 3}
+  m_Script: {fileID: 11500000, guid: a65f4bb6c6c79ea4ca842eacf97ecba2, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myTeam: 1
