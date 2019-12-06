@@ -81,7 +81,6 @@ public class TowerDragHandler : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.Escape))
             {
-                //add tempGoldMissing to player gold
                 //tempGoldMissing = 0
                 holdingTower = false;
                 Cursor.SetCursor(null, vect2, cursMode);
