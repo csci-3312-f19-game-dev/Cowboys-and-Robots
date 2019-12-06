@@ -27,14 +27,23 @@ public class GameController : MonoBehaviour
 
     public int playerGps;
 
-    private float enemyStartGps = 3.5f;
-    private float enemyMaxGps = 12;
+    private float enemyStartGps = 4f;
+    private float enemyMaxGps = 10;
 
     private float scaleStopTime;
 
     private int playerStartGps = 2;
 
-    public int[] costs = { 10, 15, 25, 15, 25, 30, 12, 17, 30 };
+    private int[] costs = { 10, 15, 25, 10, 25, 30, 12, 17, 30 };
+
+    private int[] economyCosts = { 40, 40, 40, 60, 60, 60, 110, 120, 130, 140, 150 };
+    private int[] economyUpgrades = { 1, 1, 1, 1, 1, 1, 2, 3, 4, 4, 4 };
+    private int economyIndex = 0;
+
+    public TextMeshProUGUI costButtonText;
+    public TextMeshProUGUI incomeText;
+
+    public TextMeshProUGUI gps;
 
     private void Start()
     {
@@ -42,6 +51,10 @@ public class GameController : MonoBehaviour
         enemyGold = 10;
         playerGps = playerStartGps;
         enemyGps = enemyStartGps;
+
+        incomeText.text = economyUpgrades[0].ToString() + " gps";
+        costButtonText.text = economyCosts[0].ToString() + " gold";
+        gps.text = playerStartGps.ToString();
     }
 
     // Update is called once per frame
@@ -74,6 +87,7 @@ public class GameController : MonoBehaviour
             enemyGps += (enemyMaxGps - enemyStartGps) / (5 * 60) * Time.fixedDeltaTime;
         }
         gameTimer += Time.fixedDeltaTime;
+
     }
 
 
@@ -99,6 +113,20 @@ public class GameController : MonoBehaviour
         {
             u = Instantiate(prefabs[which], playerBase.transform);
             u.GetComponent<Damageable>().myTeam = true;
+        }
+    }
+
+    public void upgradeEconomy()
+    {
+        if (money >= economyCosts[economyIndex])
+        {
+            playerGps += economyUpgrades[economyIndex];
+            money -= economyCosts[economyIndex];
+            economyIndex++;
+
+            incomeText.text = economyUpgrades[economyIndex].ToString() + " gps";
+            costButtonText.text = economyCosts[economyIndex].ToString() + " gold";
+            gps.text = playerGps.ToString();
         }
     }
 
