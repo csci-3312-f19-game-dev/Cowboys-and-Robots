@@ -477,7 +477,7 @@ GameObject:
   - component: {fileID: 1426944558069736169}
   - component: {fileID: 1426944558069736173}
   - component: {fileID: 8383985530116527758}
-  - component: {fileID: 7081342481977794130}
+  - component: {fileID: 6936002793291064652}
   m_Layer: 8
   m_Name: Cavalry Tower
   m_TagString: Untagged
@@ -493,7 +493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1426944558069736182}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: -9}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 5659170528844145471}
@@ -540,7 +540,7 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 7
---- !u!114 &7081342481977794130
+--- !u!114 &6936002793291064652
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -549,14 +549,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1426944558069736182}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 9fe2ec758146792448dde13e4f282d50, type: 3}
+  m_Script: {fileID: 11500000, guid: 8e6b94b4d51454a4aa3ed20810d1c28d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   myTeam: 1
   projectile: {fileID: 1069690804675967869, guid: 6a8ff4e7bcdeca0488e8871d1ed2ffc0,
     type: 3}
   cbRenderer: {fileID: 1426944557966610317}
-  rbRenderer: {fileID: 1426944556516128054}
+  rbRenderer: {fileID: 0}
   healthSlider: {fileID: 1426944557764013438}
 --- !u!1 &1426944558338429226
 GameObject:

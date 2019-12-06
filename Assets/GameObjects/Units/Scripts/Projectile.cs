@@ -19,7 +19,7 @@ public class Projectile : MonoBehaviour
         {
             Destroy(gameObject);
         }
-        //gameObject.transform.position = (1 - ticker) * to.position + ticker * from.position;
+        gameObject.transform.position = (1 - ticker) * to.position + ticker * from.position;
         if((ticker -= 4 * Time.fixedDeltaTime) < 0)
         {
             Destroy(gameObject);

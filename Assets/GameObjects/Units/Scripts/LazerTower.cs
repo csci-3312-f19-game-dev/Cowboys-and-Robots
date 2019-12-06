@@ -4,7 +4,7 @@ using UnityEngine;
 using Pathfinding;
 using UnityEngine.UI;
 
-public class LightTower : Tower
+public class LazerTower : Tower
 {
     public GameObject projectile;
 
@@ -18,10 +18,10 @@ public class LightTower : Tower
 
     private void Start()
     {
-        health = maxHealth = 100;
-        damage = 5f;
-        range = 10f;
-        atkRate = 0.7f;
+        health = maxHealth = 200;
+        damage = 1f;
+        range = 30f;
+        atkRate = 0f;
         atkCooldown = atkRate;
 
         gc = FindObjectOfType<GameController>();
