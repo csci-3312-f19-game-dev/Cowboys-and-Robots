@@ -13,13 +13,11 @@ public class PauseMenu : MonoBehaviour
     public void PauseGame()
     {
         pausePanel.SetActive(true);
-        Time.timeScale = 0f;
     }
 
     public void ResumeGame()
     {
         pausePanel.SetActive(false);
-        Time.timeScale = 1f;
     }
     // Update is called once per frame
     void Update()
