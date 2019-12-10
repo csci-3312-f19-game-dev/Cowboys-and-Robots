@@ -18,7 +18,7 @@ public class LightTower : Tower
 
     private void Start()
     {
-        health = maxHealth = 100;
+        health = maxHealth = 500;
         damage = 5f;
         range = 10f;
         atkRate = 0.7f;

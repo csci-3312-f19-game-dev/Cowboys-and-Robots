@@ -1569,7 +1569,8 @@ MonoBehaviour:
     m_VerticalOverflow: 0
     m_LineSpacing: 1
   m_Text: 'In a post-apocalyptic world, cowboys battle AI''s for control. Deploy units
-    and towers to overtake the robot base. Here is a helpful diagram:'
+    and towers to overtake the robot base. You will need to upgrade your economy in
+    order to keep up with the robots! Here is a helpful diagram:'
 --- !u!222 &1410965891
 CanvasRenderer:
   m_ObjectHideFlags: 0

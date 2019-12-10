@@ -18,8 +18,8 @@ public class LazerTower : Tower
 
     private void Start()
     {
-        health = maxHealth = 200;
-        damage = 1f;
+        health = maxHealth = 300;
+        damage = 0.5f;
         range = 30f;
         atkRate = 0f;
         atkCooldown = atkRate;

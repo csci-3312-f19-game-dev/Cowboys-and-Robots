@@ -27,8 +27,8 @@ public class GameController : MonoBehaviour
 
     public int playerGps;
 
-    private float enemyStartGps = 4f;
-    private float enemyMaxGps = 10;
+    private float enemyStartGps = 1f;
+    private float enemyMaxGps = 30f;
 
     private float scaleStopTime;
 
@@ -36,14 +36,19 @@ public class GameController : MonoBehaviour
 
     private int[] costs = { 10, 15, 25, 10, 25, 30, 12, 17, 30 };
 
-    private int[] economyCosts = { 40, 40, 40, 60, 60, 60, 110, 120, 130, 140, 150 };
-    private int[] economyUpgrades = { 1, 1, 1, 1, 1, 1, 2, 3, 4, 4, 4 };
+    private int[] economyCosts = { 30, 35, 40, 50, 60, 70, 100, 110, 120, 130, 140, 500 };
+    private int[] economyUpgrades = { 1, 1, 1, 1, 1, 1, 2, 3, 4, 4, 4, 100 };
     private int economyIndex = 0;
 
     public TextMeshProUGUI costButtonText;
     public TextMeshProUGUI incomeText;
 
     public TextMeshProUGUI gps;
+
+    private bool spawnedFirstDefense = false;
+    private bool spawnedSecondDefense = false;
+
+    public AudioSource asc;
 
     private void Start()
     {
@@ -67,8 +72,7 @@ public class GameController : MonoBehaviour
         if (enemyGold >= costs[nextEnemy])
         {
             enemyGold -= costs[nextEnemy];
-            GameObject u//;
-            /*u*/ = Instantiate(prefabs[nextEnemy], enemyBase.transform);
+            GameObject u = Instantiate(prefabs[nextEnemy], enemyBase.transform);
             u.GetComponent<Damageable>().myTeam = false;
             nextEnemy = Random.Range(0, 9);
         }
@@ -84,8 +88,31 @@ public class GameController : MonoBehaviour
         }
         if (gameTimer < 5 * 60)
         {
-            enemyGps += (enemyMaxGps - enemyStartGps) / (5 * 60) * Time.fixedDeltaTime;
+            enemyGps += (enemyMaxGps - enemyStartGps) / (10 * 60) * Time.fixedDeltaTime;
         }
+
+        if (enemyBase.GetComponent<Base>().healthbar.value <= 0.5 && !spawnedFirstDefense)
+        {
+            enemyBase.GetComponent<Animator>().SetBool("HalfHealth", true);
+            for (int i = 0; i < 15; i++)
+            {
+                Instantiate(prefabs[Random.Range(0, 9)], enemyBase.transform);
+            }
+            spawnedFirstDefense = true;
+        }
+
+        if (enemyBase.GetComponent<Base>().healthbar.value <= 0.25 && !spawnedSecondDefense)
+        {
+            enemyBase.GetComponent<Animator>().SetBool("QuarterHealth", true);
+            for (int i = 0; i < 20; i++)
+            {
+                Instantiate(prefabs[Random.Range(0, 9)], enemyBase.transform);
+            }
+
+            spawnedSecondDefense = true;
+        }
+
+
         gameTimer += Time.fixedDeltaTime;
 
     }
@@ -98,6 +125,7 @@ public class GameController : MonoBehaviour
         {
             InstantiateUnit(which);
             money -= costs[which];
+            asc.Play();
         }
     }
 

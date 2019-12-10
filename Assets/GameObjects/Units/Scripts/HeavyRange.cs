@@ -22,7 +22,7 @@ public class HeavyRange : Heavy
     private void Start()
     {
         //Debug.Log(infoPanel);
-        health = maxHealth = 75;
+        health = maxHealth = 125;
         damage = 20;
         range = 2.5f;
         atkRate = 1f;

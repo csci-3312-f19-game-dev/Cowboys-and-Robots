@@ -19,7 +19,7 @@ public class HeavyMelee : Heavy
 
     private void Start()
     {
-        health = maxHealth = 120;
+        health = maxHealth = 200;
         damage = 15;
         range = 0.4f;
         atkRate = 0.75f;

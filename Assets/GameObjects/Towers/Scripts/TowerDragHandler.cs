@@ -12,12 +12,15 @@ public class TowerDragHandler : MonoBehaviour
     private GameObject tower;
     private int tempGoldMissing;
 
+    public GameController gc;
+
     public Sprite lightTowerSprite, heavyTowerSprite, superHeavyTowerSprite;
     private Texture2D cursorTextureLight, cursorTextureHeavy, cursorTextureSuperHeavy;
     private CursorMode cursMode = CursorMode.Auto;
     private Vector2 vect2 = Vector2.zero;
     public void Start()
     {
+        gc = FindObjectOfType<GameController>();
         cursorTextureLight = SpriteToTexture(lightTowerSprite);
         cursorTextureHeavy = SpriteToTexture(heavyTowerSprite);
         cursorTextureSuperHeavy = SpriteToTexture(superHeavyTowerSprite);
@@ -39,28 +42,36 @@ public class TowerDragHandler : MonoBehaviour
     {
         if (!holdingTower)
         {
-            if (type == 0)
+            Debug.Log(gc.money);
+            if (type == 0 && gc.money >= 40)
             {
                 //if you have enough gold then do this stuff otherwise nothing (LIGHT TOWER)
-                //tempGoldMissing = **Tower cost
+                tempGoldMissing = 40;
+                
                 tower = lightTower;
                 Cursor.SetCursor(cursorTextureLight, vect2, cursMode);
+                holdingTower = true;
             }
-            else if (type == 1)
+            else if (type == 1 && gc.money >= 100)
             {
+                tempGoldMissing = 100;
                 //if you have enough gold then do this stuff otherwise nothing (HEAVY TOWER)
                 //tempGoldMissing = **Tower cost
                 tower = heavyTower;
                 Cursor.SetCursor(cursorTextureHeavy, vect2, cursMode);
+                holdingTower = true;
             }
-            else if (type == 2)
+            else if (type == 2 && gc.money >= 160)
             {
                 //if you have enough gold then do this stuff otherwise nothing (LAZER TOWER)
                 //tempGoldMissing = **Tower cost
+
+                tempGoldMissing = 160;
                 tower = superHeavyTower;
                 Cursor.SetCursor(cursorTextureSuperHeavy, vect2, cursMode);
+                holdingTower = true;
             }
-            holdingTower = true;
+            
         }
     }
 
@@ -71,8 +82,8 @@ public class TowerDragHandler : MonoBehaviour
         {
             if(Input.GetMouseButtonDown(0))
             {
-                //player gold -= tempGoldMissing
-                //tempGoldMissing = 0
+                gc.money -= tempGoldMissing;
+                tempGoldMissing = 0;
                 Vector3 mousepos = Camera.main.ScreenToWorldPoint(Input.mousePosition);
                 mousepos = new Vector3(mousepos.x, mousepos.y, 1);
                 Instantiate(tower, mousepos, Quaternion.identity);             
@@ -81,7 +92,7 @@ public class TowerDragHandler : MonoBehaviour
             }
             if(Input.GetKeyDown(KeyCode.Escape))
             {
-                //tempGoldMissing = 0
+                tempGoldMissing = 0;
                 holdingTower = false;
                 Cursor.SetCursor(null, vect2, cursMode);
             }

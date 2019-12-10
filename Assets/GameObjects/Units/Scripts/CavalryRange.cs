@@ -24,7 +24,7 @@ public class CavalryRange : Cavalry
         health = maxHealth = 75;
         damage = 20;
         range = 2.5f;
-        atkRate = 1f;
+        atkRate = 0.7f;
         atkCooldown = atkRate;
 
         gc = FindObjectOfType<GameController>();
@@ -55,9 +55,6 @@ public class CavalryRange : Cavalry
 
 
 
-        Debug.Log(targets.Count);
-
-
         for (int i = 0; i < targets.Count; i++)
         {
             if (targets[i] == null)
@@ -66,8 +63,6 @@ public class CavalryRange : Cavalry
                 i--;
             }
         }
-
-        Debug.Log(targets.Count);
 
 
         // Pick closest target

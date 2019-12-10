@@ -18,7 +18,7 @@ public class HeavyTower: Tower
 
     private void Start()
     {
-        health = maxHealth = 500;
+        health = maxHealth = 1200;
         damage = 20;
         range = 5f;
         atkRate = 0.5f;
